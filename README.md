@@ -1,4 +1,4 @@
 # Compiler
-Technology used: Flex/Lex & Bison/Yacc
+<strong>Technology used:</strong> Flex/Lex & Bison/Yacc
 <br>
-Language used: LaTeX
+<strong>Language used:</strong> LaTeX
