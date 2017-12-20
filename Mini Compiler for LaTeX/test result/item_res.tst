@@ -1,0 +1,40 @@
+ Now try a single nested block of two
+
+
+        - Single is for Single spacing
+
+
+
+        1. Single is for Single spacing
+
+        2. Verbatim allows text that matches the what you see is what you get mode
+
+        3. Itemize uses ticks to indicate items
+
+        4. Center allows a block to be centered
+
+
+
+        - Verbatim allows text that matches the what you see is what you get mode
+
+
+        - Itemize uses ticks to indicate items
+
+
+
+        - Single is for Single spacing
+
+
+        - Verbatim allows text that matches the what you see is what you get mode
+
+
+        - Itemize uses ticks to indicate items
+
+
+        - Center allows a block to be centered
+
+
+
+
+        - Center allows a block to be centered
+

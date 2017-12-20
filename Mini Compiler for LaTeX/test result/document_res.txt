@@ -1,0 +1,191 @@
+
+
+
+
+
+
+
+
+I Introduction to Project III
+
+   This is a documentation for the third
+and final part of the semester project.
+This part of the project mostly focuses
+   on the actual generation of formatted
+
+I.I Team Members
+
+
+
+        1. Tsz Yan Wong
+        2. Qiyu Li
+
+II Assumption
+
+      When our team was implementing the
+    compiler, there are some assumptions
+        that we made in order to move on
+    smoothly and quickly without getting
+stuck on a single problem for too long.
+We also approached problems in, not only
+  one, but several ways just to find the
+
+
+
+
+         -- Page V --
+
+
+
+For example, when dealing with the page
+      numbering, we had to decide on the
+    amount of lines to count as a single
+ page as well as how to display it in a
+  way that is easy and clear to read. We
+    decided to have 10 lines a page when
+testing and adjusted it back to 40 lines
+     per page at the end to decrease the
+    number of times that the page number
+      shows up. We assumed that we could
+   insert a statement page x anywhere in
+
+
+
+
+         -- Page VI --
+
+
+
+  the generated document to indicate the
+      page number and so decided to have
+  Another assumption was that we assumed
+    the page numbering style also applies to
+   section header number as well and not
+just applies to the actual page numbers.
+What we mean by this is that if the user
+     changes the page numbering style to
+  upper case roman Roman , the generated
+  document must have upper case roman as
+       the style of the page numbers for
+
+
+
+
+         -- Page VII --
+
+
+
+   example, page 1 becomes page I and it
+must also have upper case roman style on
+  section header number for example, 1.1
+           Introduction would become I.I
+    The third assumption we had made was
+that the right justification token would
+look like right. We then created a token
+ in our files to recognize it so that
+paragraphs would be right justified and
+    The fourth assumption is that in the
+     latex, all the paragraphs are right
+
+
+
+
+         -- Page VIII --
+
+
+
+     justification. Those paragraphs are
+
+III Design Log
+
+  There are many MAJOR design steps that
+  we made throughout the project such as
+
+
+        - Figured out how to make use of dollar sign and yytext to pass up values.
+        - Figured out how linespacing single double trible should be implemented.
+        - Figured out how to change fonts to italic
+        - Figured out how nested blocks should be produce.
+        - Figured out how itemize and enumerate work, even in nested situations.
+        - Figured out how to recognize the page numbering style and applied to page number and section header
+        - Figured out how to center passage in paragraph and tables
+
+
+
+
+
+III.I Encountered Problems and Solutions
+
+           Throughout the project, we ve
+     encountered many different problems
+   ranging from small bugs to big design
+   problems. At the beginning, we had no
+   idea how to approach the problems and
+  had no idea how to implement the LaTeX
+      commands. We spent time every week
+  asking questions and finding solutions
+
+
+
+
+         -- Page IX --
+
+
+
+    to our problems. We do not have much
+     experience in C programming so this
+     project gave both of us a hard time
+      starting out. However, once we got
+started, everything seemed to be cleared
+ out a lot and were moving smoothly
+   Since both of us had no experience in
+LaTeX word processing before taking this
+      class, it also gave us a hard time
+      understand how some commands work.
+Although we have the latex.all.txt file
+
+
+
+
+         -- Page X --
+
+
+
+  to help guide us into some directions,
+we still felt lost for quite a long time
+    since project 1. There are also some
+        commands in the manual that were
+   explained very clearly and there were
+   not many good articles out there that
+   When we first started the project, we
+also had a difficult time compiling the
+    source codes, but fortunately enough
+that some other students in class found
+        a way to bypass that and fix the
+
+
+
+
+         -- Page XI --
+
+
+
+problem. For example, compiling the file
+  using Bison without the d option would
+not produce the right executable at the
+   beginning. Also, we had to modify the
+   provided source codes a bit to get it
+going because there were some errors in
+   it that kept producing error messages
+
+III.II Aspect of Project Easy vs. Hard
+
+      There were some easy parts such as
+adding function calls to the latexp3c.y
+file and adding new tools and functions
+in the util.c file. However, getting to
+
+
+
+
+         -- Page XII --                                         
