@@ -1,7 +1,5 @@
 # Compiler
-<strong>Technology used:</strong> Flex/Lex & Bison/Yacc
-<br>
-<strong>Language used:</strong> C
+<strong>Skills & Tools:</strong> C, Flex, Bison, Regular Expression
 <br>
 <strong>For: LaTeX</strong>
 <br><br>
