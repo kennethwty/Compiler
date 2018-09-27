@@ -1,9 +1,7 @@
 # Compiler
-<strong>Skills & Tools:</strong> C, Flex, Bison, Regular Expression
-<br>
-<strong>For:</strong> LaTeX
+<strong>Skills & Tools:</strong> C, Flex, Bison, Regular Expression, LALR Parser, Context-Free Grammar
 <br><br>
-<strong>For the mini LaTeX compiler, use the following commands to compile and run ($ is the prompt):</strong>
+<strong>For the partial LaTeX compiler, use the following commands to compile and run ($ is the prompt):</strong>
 <br>
 $ flex latexv3.l<br>
 $ bison -d latexp3c.y<br>
