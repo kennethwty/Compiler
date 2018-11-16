@@ -128,22 +128,14 @@ backsoptions     :  beginendopts
 beginendopts     :  LBEGIN  begcmds {
                     fprintf(fpout,"\n");              
                     strcat(single,$2);
-                     
-                
                     }
                    beginblock
-                  endbegin{
+                   endbegin{
                           fprintf(fpout,"\n\n");
-                         
-                         deletsing(single,endv);
-                         
+                          deletsing(single,endv);
                           list_num=1;  
-                       
-                         
-                
-                     
-                  }  
-                 ;
+                 }  
+        	 ;
 
 begcmds          :  CENTER {
                                
@@ -174,89 +166,61 @@ endcmds          :  CENTER {strcpy($$,yytext);}
                  | RIGHT
                  ;
 
-beginblock       :  beginendopts{
-
-                   
-                         }
-                 |  textoption /* FOR single or verbatim */
-                                    {printf("single or verb or right\n");
-                        
-                     
-                       generatebgverb(single,$1);
-                           }
-                 |  entrylist  /* FOR center and tabular */
-                                    {printf("center or tabular\n");
-                       
-                            
-                               }
+beginblock       :  beginendopts{}
+                 |  textoption /* FOR single or verbatim */ {
+		 	printf("single or verb or right\n");
+                        generatebgverb(single,$1);
+                    }
+                 |  entrylist  /* FOR center and tabular */ {
+		 	printf("center or tabular\n");
+                    }
                  |  listblock  /* FOR item and enumerate */
-                                    {printf("item or enumerate\n");
-                          strcpy($$,yytext);
-                    
-                       
-                             }
+                    {
+		    	printf("item or enumerate\n");
+                        strcpy($$,yytext);
+		    }
                  ;
-
-listblock        :  listblock  anitem
-                                    {printf("listblockA\n");
-                                         
-                                
-                   }
-                 |  anitem
-                                    {printf("listblockB\n");
-                                  
-	
-                 }
+listblock        :  listblock  anitem {
+			printf("listblockA\n");          
+                    }
+                 |  anitem {
+		 	printf("listblockB\n");
+		    }
                  ;
 
 anitem           :  ITEM  textoption {
-                                      strcpy(itemtx,$2);
-                      generate_itemize_block(itemtx,single);
-                        }
+                      	strcpy(itemtx,$2);
+                      	generate_itemize_block(itemtx,single);
+                    }
                  |  beginendopts {strcpy($$,yytext);}
                  ;
 
-entrylist        :  entrylist  anentry
-                                    {printf("entrylistA\n");
-                                     
-                                        }
-                 |  anentry
-                                    {printf("entrylistB\n");
-                             }
+entrylist        :  entrylist  anentry {
+			printf("entrylistA\n");       
+                    }
+                 |  anentry {
+		 	printf("entrylistB\n");
+                    }
                  ;
 
-anentry          :  entry  DBLBS
-                                    {printf("anentryA\n");
-                             
-                                 strcpy(itemtx,$1);
-                               
-                
-                             generatecent(single,itemtx);
-                               }
-                 |  beginendopts
-                                    {printf("anentryB\n");
-                    
-                                    }
+anentry          :  entry  DBLBS {
+			printf("anentryA\n");
+                        strcpy(itemtx,$1);
+                        generatecent(single,itemtx);
+                    }
+                 |  beginendopts {
+		 	printf("anentryB\n");
+                    }
                  ;
 
-entry            :  entry  SPECCHAR  textoption
-                                    {printf("entryA\n");
-                      
-           
-		               generatetab(tabu,$3,tabcsp);
-               
-                           }
-                           
-                           
-                                   
-                 |  textoption
-                                    {printf("entryB\n");
-         
-             
-                   generatetab(tabu,$1,tabcsp);     
-                        
-                       
-                               }
+entry            :  entry  SPECCHAR  textoption {
+			printf("entryA\n");
+                   	generatetab(tabu,$3,tabcsp);
+               	    }               
+                 |  textoption {
+		    	printf("entryB\n");
+                    	generatetab(tabu,$1,tabcsp);     
+		    }
                  ;
 
 begtableopts     :  LSQRB  position  RSQRB{strcpy(tablo,$2);}
